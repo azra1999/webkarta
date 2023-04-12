@@ -1,0 +1,1 @@
+var json_znaksjevera_7 = {"type":"FeatureCollection","name":"znaksjevera_7","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[16.52164764399782,44.518288953175947]}}]}
