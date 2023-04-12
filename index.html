@@ -682,7 +682,7 @@
                         <td colspan="2">' + (feature.properties['Slika'] !== null ? '<img src="images/' + String(feature.properties['Slika']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><b>' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Opis'] !== null ? autolinker.link(feature.properties['Opis'].toLocaleString()) : '') + '</td>\
