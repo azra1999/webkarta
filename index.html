@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/Granica_0.js"></script>
+        <script src="data/okolina_naziv_1.js"></script>
+        <script src="data/Okolina_2.js"></script>
+        <script src="data/naselja_3.js"></script>
+        <script src="data/put_4.js"></script>
+        <script src="data/oznakaput_5.js"></script>
+        <script src="data/rijeka_6.js"></script>
+        <script src="data/znaksjevera_7.js"></script>
+        <script src="data/rijeka_oznaka_8.js"></script>
+        <script src="data/uma_9.js"></script>
+        <script src="data/Historijskiobjekti_10.js"></script>
+        <script src="data/Prirodnabogatstva_11.js"></script>
+        <script src="data/Smjetaj_12.js"></script>
+        <script src="data/Ugostiteljskiobjekti_13.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:21, minZoom:12
+        }).fitBounds([[44.48886384641993,16.432611204385427],[44.68908667911934,17.00396609866307]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            map.setMaxBounds(map.getBounds());
+        }
+        function pop_Granica_0(feature, layer) {
+        }
+
+        function style_Granica_0_0() {
+            return {
+                pane: 'pane_Granica_0',
+                opacity: 1,
+                color: 'rgba(56,128,54,0.5)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(77,175,74,0.5)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Granica_0');
+        map.getPane('pane_Granica_0').style.zIndex = 400;
+        map.getPane('pane_Granica_0').style['mix-blend-mode'] = 'normal';
+        var layer_Granica_0 = new L.geoJson(json_Granica_0, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Granica_0',
+            layerName: 'layer_Granica_0',
+            pane: 'pane_Granica_0',
+            onEachFeature: pop_Granica_0,
+            style: style_Granica_0_0,
+        });
+        bounds_group.addLayer(layer_Granica_0);
+        map.addLayer(layer_Granica_0);
+        function pop_okolina_naziv_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['naziv'] !== null ? autolinker.link(feature.properties['naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_okolina_naziv_1_0() {
+            return {
+                fill: false,
+                stroke: false,
+                interactive: false
+            }
+        }
+        map.createPane('pane_okolina_naziv_1');
+        map.getPane('pane_okolina_naziv_1').style.zIndex = 401;
+        map.getPane('pane_okolina_naziv_1').style['mix-blend-mode'] = 'normal';
+        var layer_okolina_naziv_1 = new L.geoJson(json_okolina_naziv_1, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_okolina_naziv_1',
+            layerName: 'layer_okolina_naziv_1',
+            pane: 'pane_okolina_naziv_1',
+            onEachFeature: pop_okolina_naziv_1,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_okolina_naziv_1_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_okolina_naziv_1);
+        map.addLayer(layer_okolina_naziv_1);
+        function pop_Okolina_2(feature, layer) {
+        }
+
+        function style_Okolina_2_0() {
+            return {
+                pane: 'pane_Okolina_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(147,160,146,1.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Okolina_2');
+        map.getPane('pane_Okolina_2').style.zIndex = 402;
+        map.getPane('pane_Okolina_2').style['mix-blend-mode'] = 'normal';
+        var layer_Okolina_2 = new L.geoJson(json_Okolina_2, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Okolina_2',
+            layerName: 'layer_Okolina_2',
+            pane: 'pane_Okolina_2',
+            onEachFeature: pop_Okolina_2,
+            style: style_Okolina_2_0,
+        });
+        bounds_group.addLayer(layer_Okolina_2);
+        map.addLayer(layer_Okolina_2);
+        function pop_naselja_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NAZIV_1'] !== null ? autolinker.link(feature.properties['NAZIV_1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_naselja_3_0() {
+            return {
+                fill: false,
+                stroke: false,
+                interactive: false
+            }
+        }
+        map.createPane('pane_naselja_3');
+        map.getPane('pane_naselja_3').style.zIndex = 403;
+        map.getPane('pane_naselja_3').style['mix-blend-mode'] = 'normal';
+        var layer_naselja_3 = new L.geoJson(json_naselja_3, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_naselja_3',
+            layerName: 'layer_naselja_3',
+            pane: 'pane_naselja_3',
+            onEachFeature: pop_naselja_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_naselja_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_naselja_3);
+        map.addLayer(layer_naselja_3);
+        function pop_put_4(feature, layer) {
+        }
+
+        function style_put_4_0(feature) {
+            switch(String(feature.properties['q2wHide_ref'])) {
+                case 'R-410':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(243,237,189,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'R-407a':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(243,237,189,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'R 166;R-410':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'R 166':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'R 165;R 407a':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(243,237,189,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'M-5':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(253,218,142,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'M 205a;R 410a':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(253,218,142,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case 'M 205;M15':
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(253,218,142,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_put_4',
+                opacity: 1,
+                color: 'rgba(134,121,129,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_put_4');
+        map.getPane('pane_put_4').style.zIndex = 404;
+        map.getPane('pane_put_4').style['mix-blend-mode'] = 'normal';
+        var layer_put_4 = new L.geoJson(json_put_4, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_put_4',
+            layerName: 'layer_put_4',
+            pane: 'pane_put_4',
+            onEachFeature: pop_put_4,
+            style: style_put_4_0,
+        });
+        bounds_group.addLayer(layer_put_4);
+        map.addLayer(layer_put_4);
+        function pop_oznakaput_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NAZIV'] !== null ? autolinker.link(feature.properties['NAZIV'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_oznakaput_5_0(feature) {
+            switch(String(feature.properties['NAZIV'])) {
+                case 'M-205, M-15':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/m205, r410.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'M-205a, R-410a':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/m205a, r410a.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'M-5':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/m5.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'R-165, R-407a':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/r165, r407a.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'R-166, R-410':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/r166, r410.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'R-407a':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/r407a.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'R-410':
+                    return {
+                pane: 'pane_oznakaput_5',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/r410.svg',
+            iconSize: [45.599999999999994, 45.599999999999994]
+        }),
+                interactive: false,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_oznakaput_5');
+        map.getPane('pane_oznakaput_5').style.zIndex = 405;
+        map.getPane('pane_oznakaput_5').style['mix-blend-mode'] = 'normal';
+        var layer_oznakaput_5 = new L.geoJson(json_oznakaput_5, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_oznakaput_5',
+            layerName: 'layer_oznakaput_5',
+            pane: 'pane_oznakaput_5',
+            onEachFeature: pop_oznakaput_5,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_oznakaput_5_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_oznakaput_5);
+        map.addLayer(layer_oznakaput_5);
+        function pop_rijeka_6(feature, layer) {
+        }
+
+        function style_rijeka_6_0() {
+            return {
+                pane: 'pane_rijeka_6',
+                opacity: 1,
+                color: 'rgba(31,120,180,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_rijeka_6');
+        map.getPane('pane_rijeka_6').style.zIndex = 406;
+        map.getPane('pane_rijeka_6').style['mix-blend-mode'] = 'normal';
+        var layer_rijeka_6 = new L.geoJson(json_rijeka_6, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_rijeka_6',
+            layerName: 'layer_rijeka_6',
+            pane: 'pane_rijeka_6',
+            onEachFeature: pop_rijeka_6,
+            style: style_rijeka_6_0,
+        });
+        bounds_group.addLayer(layer_rijeka_6);
+        map.addLayer(layer_rijeka_6);
+        function pop_znaksjevera_7(feature, layer) {
+        }
+
+        function style_znaksjevera_7_0() {
+            return {
+                pane: 'pane_znaksjevera_7',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/kompas.svg',
+            iconSize: [266.0, 266.0]
+        }),
+                interactive: false,
+            }
+        }
+        map.createPane('pane_znaksjevera_7');
+        map.getPane('pane_znaksjevera_7').style.zIndex = 407;
+        map.getPane('pane_znaksjevera_7').style['mix-blend-mode'] = 'normal';
+        var layer_znaksjevera_7 = new L.geoJson(json_znaksjevera_7, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_znaksjevera_7',
+            layerName: 'layer_znaksjevera_7',
+            pane: 'pane_znaksjevera_7',
+            onEachFeature: pop_znaksjevera_7,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_znaksjevera_7_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_znaksjevera_7);
+        map.addLayer(layer_znaksjevera_7);
+        function pop_rijeka_oznaka_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_rijeka_oznaka_8_0(feature) {
+            switch(String(feature.properties['Naziv'])) {
+                case 'Sana':
+                    return {
+                pane: 'pane_rijeka_oznaka_8',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Sana.svg',
+            iconSize: [76.0, 76.0]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'Sanica':
+                    return {
+                pane: 'pane_rijeka_oznaka_8',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Sanica.svg',
+            iconSize: [76.0, 76.0]
+        }),
+                interactive: false,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_rijeka_oznaka_8');
+        map.getPane('pane_rijeka_oznaka_8').style.zIndex = 408;
+        map.getPane('pane_rijeka_oznaka_8').style['mix-blend-mode'] = 'normal';
+        var layer_rijeka_oznaka_8 = new L.geoJson(json_rijeka_oznaka_8, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_rijeka_oznaka_8',
+            layerName: 'layer_rijeka_oznaka_8',
+            pane: 'pane_rijeka_oznaka_8',
+            onEachFeature: pop_rijeka_oznaka_8,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_rijeka_oznaka_8_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_rijeka_oznaka_8);
+        map.addLayer(layer_rijeka_oznaka_8);
+        function pop_uma_9(feature, layer) {
+        }
+
+        function style_uma_9_0(feature) {
+            switch(String(feature.properties['q2wHide_vrsta'])) {
+                case 'bjelogorična':
+                    return {
+                pane: 'pane_uma_9',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/bjelogorična šuma.svg',
+            iconSize: [76.0, 76.0]
+        }),
+                interactive: false,
+            }
+                    break;
+                case 'mješovita':
+                    return {
+                pane: 'pane_uma_9',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/mješovita.svg',
+            iconSize: [76.0, 76.0]
+        }),
+                interactive: false,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_uma_9');
+        map.getPane('pane_uma_9').style.zIndex = 409;
+        map.getPane('pane_uma_9').style['mix-blend-mode'] = 'normal';
+        var layer_uma_9 = new L.geoJson(json_uma_9, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_uma_9',
+            layerName: 'layer_uma_9',
+            pane: 'pane_uma_9',
+            onEachFeature: pop_uma_9,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_uma_9_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_uma_9);
+        map.addLayer(layer_uma_9);
+        function pop_Historijskiobjekti_10(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Slika'] !== null ? '<img src="images/' + String(feature.properties['Slika']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><b>' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Opis'] !== null ? autolinker.link(feature.properties['Opis'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Historijskiobjekti_10_0() {
+            return {
+                pane: 'pane_Historijskiobjekti_10',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/historijski objekti.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Historijskiobjekti_10');
+        map.getPane('pane_Historijskiobjekti_10').style.zIndex = 410;
+        map.getPane('pane_Historijskiobjekti_10').style['mix-blend-mode'] = 'normal';
+        var layer_Historijskiobjekti_10 = new L.geoJson(json_Historijskiobjekti_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Historijskiobjekti_10',
+            layerName: 'layer_Historijskiobjekti_10',
+            pane: 'pane_Historijskiobjekti_10',
+            onEachFeature: pop_Historijskiobjekti_10,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Historijskiobjekti_10_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Historijskiobjekti_10);
+        map.addLayer(layer_Historijskiobjekti_10);
+        function pop_Prirodnabogatstva_11(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Slika'] !== null ? '<img src="images/' + String(feature.properties['Slika']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Opis'] !== null ? autolinker.link(feature.properties['Opis'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Opis 2'] !== null ? autolinker.link(feature.properties['Opis 2'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Prirodnabogatstva_11_0() {
+            return {
+                pane: 'pane_Prirodnabogatstva_11',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/prirodna bogatstva.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Prirodnabogatstva_11');
+        map.getPane('pane_Prirodnabogatstva_11').style.zIndex = 411;
+        map.getPane('pane_Prirodnabogatstva_11').style['mix-blend-mode'] = 'normal';
+        var layer_Prirodnabogatstva_11 = new L.geoJson(json_Prirodnabogatstva_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Prirodnabogatstva_11',
+            layerName: 'layer_Prirodnabogatstva_11',
+            pane: 'pane_Prirodnabogatstva_11',
+            onEachFeature: pop_Prirodnabogatstva_11,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Prirodnabogatstva_11_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Prirodnabogatstva_11);
+        map.addLayer(layer_Prirodnabogatstva_11);
+        function pop_Smjetaj_12(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Slika'] !== null ? autolinker.link(feature.properties['Slika'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Naziv</th>\
+                        <td><b>' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Adresa</th>\
+                        <td>' + (feature.properties['Adresa'] !== null ? autolinker.link(feature.properties['Adresa'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Telefon</th>\
+                        <td>' + (feature.properties['Telefon'] !== null ? autolinker.link(feature.properties['Telefon'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">E-mail</th>\
+                        <td>' + (feature.properties['E-mail'] !== null ? autolinker.link(feature.properties['E-mail'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Booking</th>\
+                        <td>' + (feature.properties['Booking'] !== null ? autolinker.link(feature.properties['Booking'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Smjetaj_12_0() {
+            return {
+                pane: 'pane_Smjetaj_12',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/smještaj.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Smjetaj_12');
+        map.getPane('pane_Smjetaj_12').style.zIndex = 412;
+        map.getPane('pane_Smjetaj_12').style['mix-blend-mode'] = 'normal';
+        var layer_Smjetaj_12 = new L.geoJson(json_Smjetaj_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Smjetaj_12',
+            layerName: 'layer_Smjetaj_12',
+            pane: 'pane_Smjetaj_12',
+            onEachFeature: pop_Smjetaj_12,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Smjetaj_12_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Smjetaj_12);
+        map.addLayer(layer_Smjetaj_12);
+        function pop_Ugostiteljskiobjekti_13(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Slika'] !== null ? autolinker.link(feature.properties['Slika'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Naziv</th>\
+                        <td>' + (feature.properties['Naziv'] !== null ? autolinker.link(feature.properties['Naziv'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Adresa</th>\
+                        <td>' + (feature.properties['Adresa'] !== null ? autolinker.link(feature.properties['Adresa'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Radno vrij</th>\
+                        <td>' + (feature.properties['Radno vrij'] !== null ? autolinker.link(feature.properties['Radno vrij'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Telefon</th>\
+                        <td>' + (feature.properties['Telefon'] !== null ? autolinker.link(feature.properties['Telefon'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Facebook</th>\
+                        <td>' + (feature.properties['Facebook'] !== null ? autolinker.link(feature.properties['Facebook'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Ugostiteljskiobjekti_13_0() {
+            return {
+                pane: 'pane_Ugostiteljskiobjekti_13',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/ugostiteljski objekti.svg',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Ugostiteljskiobjekti_13');
+        map.getPane('pane_Ugostiteljskiobjekti_13').style.zIndex = 413;
+        map.getPane('pane_Ugostiteljskiobjekti_13').style['mix-blend-mode'] = 'normal';
+        var layer_Ugostiteljskiobjekti_13 = new L.geoJson(json_Ugostiteljskiobjekti_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Ugostiteljskiobjekti_13',
+            layerName: 'layer_Ugostiteljskiobjekti_13',
+            pane: 'pane_Ugostiteljskiobjekti_13',
+            onEachFeature: pop_Ugostiteljskiobjekti_13,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Ugostiteljskiobjekti_13_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Ugostiteljskiobjekti_13);
+        map.addLayer(layer_Ugostiteljskiobjekti_13);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/ugostiteljski objekti.png" width="20" height="30" /> Ugostiteljski objekti': layer_Ugostiteljskiobjekti_13,
+        '<img src="legend/smještaj.png" width="20" height="30" /> Smještaj': layer_Smjetaj_12,
+        '<img src="legend/prirodna bogatstva.png" width="20" height="30" /> Prirodna bogatstva': layer_Prirodnabogatstva_11,
+        '<img src="legend/historijski objekti.png" width="20" height="30" /> Historijski objekti': layer_Historijskiobjekti_10,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_okolina_naziv_1.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['naziv'] !== null?String('<div style="color: #323232; font-size: 24pt; font-family: \'Gabriola\', sans-serif;">' + layer.feature.properties['naziv']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_okolina_naziv_1'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_naselja_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['NAZIV_1'] !== null?String('<div style="color: #867981; font-size: 10pt; font-family: \'Bookman Old Style\', sans-serif;">' + layer.feature.properties['NAZIV_1']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_naselja_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_rijeka_oznaka_8.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['id'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['id']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_rijeka_oznaka_8'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_okolina_naziv_1,layer_naselja_3,layer_put_4,layer_rijeka_6,layer_rijeka_oznaka_8]);
+        map.on("zoomend", function(){
+            resetLabels([layer_okolina_naziv_1,layer_naselja_3,layer_put_4,layer_rijeka_6,layer_rijeka_oznaka_8]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_okolina_naziv_1,layer_naselja_3,layer_put_4,layer_rijeka_6,layer_rijeka_oznaka_8]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_okolina_naziv_1,layer_naselja_3,layer_put_4,layer_rijeka_6,layer_rijeka_oznaka_8]);
+        });
+        </script>
+    </body>
+</html>

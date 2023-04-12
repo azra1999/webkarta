@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="r410.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.71624579"
+     inkscape:cx="163.35175"
+     inkscape:cy="567.5426"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="720.42308"
+       y="864.22847"
+       width="259.68739"
+       height="206.63298"
+       id="rect567" />
+    <rect
+       x="347.64602"
+       y="383.94641"
+       width="113.08967"
+       height="153.57856"
+       id="rect1123" />
+    <rect
+       x="54.450582"
+       y="307.15713"
+       width="663.18016"
+       height="376.96557"
+       id="rect297" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#fff7d1;fill-opacity:1;stroke:#131313;stroke-width:0.156758;stroke-linecap:round;paint-order:stroke fill markers"
+       id="rect241-3"
+       width="160.03772"
+       height="60.668327"
+       x="23.783379"
+       y="110.40837" />
+    <text
+       xml:space="preserve"
+       style="font-size:36.5148px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';fill:#d4aa00;stroke:#131313;stroke-width:0.349335;stroke-linecap:round;paint-order:stroke fill markers"
+       x="37.712646"
+       y="157.75156"
+       id="text303"
+       transform="scale(1.0189254,0.98142612)"><tspan
+         id="tspan301"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.349335"
+         x="37.712646"
+         y="157.75156"
+         sodipodi:role="line">R-410</tspan><tspan
+         style="fill:#000000;stroke-width:0.349335"
+         x="37.712646"
+         y="205.35979"
+         id="tspan305"
+         sodipodi:role="line" /></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1121"
+       style="fill:#000000;stroke:#131313;stroke-width:0.9184252;stroke-linecap:round;paint-order:stroke fill markers;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;font-size:96px;white-space:pre;shape-inside:url(#rect1123)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text565"
+       style="fill:#ffffff;stroke:#131313;stroke-width:0.9184252;stroke-linecap:round;paint-order:stroke fill markers;-inkscape-font-specification:'sans-serif, Normal';font-family:sans-serif;font-size:160px;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect567)" />
+  </g>
+</svg>

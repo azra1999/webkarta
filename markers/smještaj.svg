@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="smještaj.svg"
+   inkscape:export-filename="restoran.png"
+   inkscape:export-xdpi="103.05143"
+   inkscape:export-ydpi="103.05143"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.87705101"
+     inkscape:cx="234.30792"
+     inkscape:cy="519.35406"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g325"
+       transform="translate(0.99458441,-2.6267067)">
+      <path
+         id="path796-9-4"
+         style="fill:#666666;fill-opacity:0.336864;stroke:#000000;stroke-width:0.241228;stroke-opacity:0"
+         d="m 182.98054,222.46652 c -17.09149,9.37104 -78.41552,7.84221 -78.41552,7.84221 0,0 15.49562,-42.64691 32.58711,-52.01796 17.09149,-9.37104 40.96654,-7.30947 53.96457,5.21984 12.99803,12.52928 8.95533,29.58485 -8.13616,38.95591 z"
+         sodipodi:nodetypes="scsss" />
+    </g>
+    <path
+       id="path796-9"
+       style="fill:#3fa0c0;stroke:#000000;stroke-width:0.536659;fill-opacity:1"
+       d="m 178.49447,96.771272 c 0,40.606838 -73.22736,131.076368 -73.22736,131.076368 0,0 -71.141773,-90.46953 -71.141773,-131.076368 0,-40.60684 31.56399,-73.52519 72.510523,-73.52519 40.94651,10e-6 71.85861,32.91835 71.85861,73.52519 z"
+       sodipodi:nodetypes="scsss" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.67811"
+       id="path3193-4"
+       cx="106.13226"
+       cy="96.494522"
+       rx="63.131382"
+       ry="65.261703" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.618356"
+       id="rect294"
+       width="82.995255"
+       height="10.549629"
+       x="64.220024"
+       y="91.985413" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.617775"
+       id="rect296"
+       width="6.1704435"
+       height="15.897361"
+       x="66.174118"
+       y="103.712" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.617775"
+       id="rect296-4"
+       width="6.1704435"
+       height="15.897361"
+       x="66.174118"
+       y="74.796799" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.617775"
+       id="rect296-2"
+       width="6.1704435"
+       height="15.897361"
+       x="137.94783"
+       y="104.05487" />
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.269669;stroke-linecap:round;paint-order:stroke fill markers"
+       id="path623"
+       cx="82.516922"
+       cy="85.145554"
+       rx="5.7011323"
+       ry="5.5868435" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.542076"
+       id="rect394"
+       width="52.746719"
+       height="7.2054267"
+       x="90.887512"
+       y="83.714348" />
+  </g>
+</svg>
